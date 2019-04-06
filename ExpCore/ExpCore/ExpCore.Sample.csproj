@@ -10,6 +10,9 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.3" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
   </ItemGroup>
 
@@ -18,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ExCore.Sample.EF\ExCore.Sample.EF.csproj" />
     <ProjectReference Include="..\ExpCore.Core\ExpCore.Core.csproj" />
     <ProjectReference Include="..\ExpCore.Infrastructure\ExpCore.Infrastructure.csproj" />
     <ProjectReference Include="..\ExpCore.ListRepository\ExpCore.ListRepository.csproj" />

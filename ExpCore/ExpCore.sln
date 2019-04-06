@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpCore", "ExpCore\ExpCore.csproj", "{A6757EAA-569C-4B98-9362-1B59613FC95C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpCore.Sample", "ExpCore\ExpCore.Sample.csproj", "{A6757EAA-569C-4B98-9362-1B59613FC95C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpCore.Core", "ExpCore.Core\ExpCore.Core.csproj", "{A3265B31-F4B0-4E35-AE68-B246683719FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpCore.Core", "ExpCore.Core\ExpCore.Core.csproj", "{A3265B31-F4B0-4E35-AE68-B246683719FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpCore.Infrastructure", "ExpCore.Infrastructure\ExpCore.Infrastructure.csproj", "{B37FC047-9410-47E1-8FB2-43951EF98605}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpCore.Infrastructure", "ExpCore.Infrastructure\ExpCore.Infrastructure.csproj", "{B37FC047-9410-47E1-8FB2-43951EF98605}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpCore.ListRepository", "ExpCore.ListRepository\ExpCore.ListRepository.csproj", "{3802D78A-BB83-4000-A1CC-E970B6F7804D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpCore.ListRepository", "ExpCore.ListRepository\ExpCore.ListRepository.csproj", "{3802D78A-BB83-4000-A1CC-E970B6F7804D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExCore.Sample.EF", "ExCore.Sample.EF\ExCore.Sample.EF.csproj", "{711E895E-3A4D-48C6-953B-2571F016D54A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3802D78A-BB83-4000-A1CC-E970B6F7804D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3802D78A-BB83-4000-A1CC-E970B6F7804D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3802D78A-BB83-4000-A1CC-E970B6F7804D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{711E895E-3A4D-48C6-953B-2571F016D54A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{711E895E-3A4D-48C6-953B-2571F016D54A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{711E895E-3A4D-48C6-953B-2571F016D54A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{711E895E-3A4D-48C6-953B-2571F016D54A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
