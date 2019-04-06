@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpCore.Core", "ExpCore.Cor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpCore.Infrastructure", "ExpCore.Infrastructure\ExpCore.Infrastructure.csproj", "{B37FC047-9410-47E1-8FB2-43951EF98605}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpCore.ListRepository", "ExpCore.ListRepository\ExpCore.ListRepository.csproj", "{3802D78A-BB83-4000-A1CC-E970B6F7804D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpCore.Sample.Repository", "ExpCore.ListRepository\ExpCore.Sample.Repository.csproj", "{3802D78A-BB83-4000-A1CC-E970B6F7804D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExCore.Sample.EF", "ExCore.Sample.EF\ExCore.Sample.EF.csproj", "{711E895E-3A4D-48C6-953B-2571F016D54A}"
 EndProject

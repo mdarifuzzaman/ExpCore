@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ExCore.Sample.EF\ExCore.Sample.EF.csproj" />
     <ProjectReference Include="..\ExpCore.Core\ExpCore.Core.csproj" />
     <ProjectReference Include="..\ExpCore.Infrastructure\ExpCore.Infrastructure.csproj" />
   </ItemGroup>

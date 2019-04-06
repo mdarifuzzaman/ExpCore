@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ExCore.Sample.EF;
+using ExCore.Sample.EF.Models;
 using ExpCore.Core.Data;
-using ExpCore.ListRepository;
+using ExpCore.ExpCore.Sample.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -27,9 +28,14 @@ namespace ExpCore
         public void ConfigureServices(IServiceCollection services)
         {
             //registration area
-            services.AddTransient<IReadOnlyRepository<Employee>, ListReadOnlyRepository<Employee>>();
-            services.AddTransient<IReadWriteRepository<Employee>, ListReadWriteRepository<Employee>>();
+            services.AddTransient<IReadOnlyRepository<Customer>, EFReadOnlyRepository<Customer>>();
 
+            services.AddTransient<IReadWriteRepository<Customer>, EFReadWriteRepository<Customer>>();
+            
+            services.AddTransient<IReadWriteRepository<Order>, EFReadWriteRepository<Order>>();
+
+            services.AddTransient<IReadOnlyRepository<OrderLine>, EFReadOnlyRepository<OrderLine>>();
+            
             //configure cors
             services.AddCors(options =>
             {
