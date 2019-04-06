@@ -1,4 +1,5 @@
 ﻿using ExpCore.Core;
+using ExpCore.Core.Attribute;
 using ExpCore.Core.Data;
 using Microsoft.AspNet.OData;
 using System;
@@ -24,9 +25,10 @@ namespace ExpCore.Infrastructure.OData
         }
 
         [EnableQuery]
-        public virtual async Task<IHttpActionResult> Get([FromODataUri] string key)
+        [QueryStringConstraint("id", true)]
+        public virtual async Task<IHttpActionResult> Get([FromODataUri] string id)
         {
-            return await base.HandleGet<TModel>(key, (id) => Repository.Get(id));
+            return await base.HandleGet<TModel>(id, (key) => Repository.Get(id));
         }
     }
 }

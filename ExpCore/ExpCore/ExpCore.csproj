@@ -10,10 +10,17 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExpCore.Core\ExpCore.Core.csproj" />
+    <ProjectReference Include="..\ExpCore.Infrastructure\ExpCore.Infrastructure.csproj" />
+    <ProjectReference Include="..\ExpCore.ListRepository\ExpCore.ListRepository.csproj" />
   </ItemGroup>
 
 </Project>

@@ -6,6 +6,5 @@ namespace ExpCore.Infrastructure.OData
 {
     public interface IODataServiceController
     {
-
     }
 }

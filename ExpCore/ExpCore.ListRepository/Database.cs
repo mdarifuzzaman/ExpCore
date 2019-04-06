@@ -10,6 +10,7 @@ namespace ExpCore.ListRepository
     {
         public Database()
         {
+            Employees = new List<Employee>();
             Employees.Add(new Employee { Id = "1", Email = "a@b.com", Address = "Address 1", Mobile = "12121212", Name = "Arif1" });
             Employees.Add(new Employee { Id = "2", Email = "b@b.com", Address = "Address 2", Mobile = "12121212", Name = "Arif1" });
             Employees.Add(new Employee { Id = "3", Email = "c@b.com", Address = "Address 3", Mobile = "12121212", Name = "Arif1" });

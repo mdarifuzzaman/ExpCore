@@ -2,9 +2,6 @@
 using ExpCore.Core.Data;
 using ExpCore.Infrastructure.Filter;
 using Microsoft.AspNet.OData;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ExpCore.Core.Data;
+using ExpCore.ListRepository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace ExpCore
 {
@@ -24,6 +24,11 @@ namespace ExpCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            //registration area
+            services.AddTransient<IReadOnlyRepository<Employee>, ListReadOnlyRepository<Employee>>();
+            services.AddTransient<IReadWriteRepository<Employee>, ListReadWriteRepository<Employee>>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

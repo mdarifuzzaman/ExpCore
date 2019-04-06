@@ -19,7 +19,7 @@ namespace ExpCore.ListRepository
 
         public async Task<IQueryable<TModel>> GetData()
         {
-            var data = database.GetData<TModel>() as IQueryable<TModel>;
+            var data = database.GetData<TModel>().AsQueryable<TModel>();
             return await Task.FromResult(data);
         }
     }

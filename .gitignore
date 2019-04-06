@@ -10,3 +10,6 @@
 /ExpCore/ExpCore.Infrastructure/bin/Debug/netcoreapp2.0
 /ExpCore/ExpCore.Infrastructure/obj
 /ExpCore/ExpCore.ListRepository/obj
+/ExpCore/.vs/config
+/ExpCore/ExpCore/ExpCore.csproj.user
+/ExpCore/ExpCore.ListRepository/bin/Debug/netcoreapp2.0
