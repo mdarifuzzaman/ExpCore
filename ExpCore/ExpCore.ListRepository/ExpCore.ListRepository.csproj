@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExpCore.Core\ExpCore.Core.csproj" />
+    <ProjectReference Include="..\ExpCore.Infrastructure\ExpCore.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
