@@ -5,3 +5,7 @@
 /ExpCore/.vs/ExpCore/v15
 /ExpCore/ExpCore/obj
 /ExpCore/ExpCore.Core/obj
+/ExpCore/ExpCore/bin/Debug/netcoreapp2.0
+/ExpCore/ExpCore.Core/bin/Debug/netcoreapp2.0
+/ExpCore/ExpCore.Infrastructure/bin/Debug/netcoreapp2.0
+/ExpCore/ExpCore.Infrastructure/obj
