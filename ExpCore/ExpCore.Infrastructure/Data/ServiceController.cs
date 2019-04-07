@@ -1,5 +1,6 @@
 ﻿using ExpCore.Core;
 using ExpCore.Core.Model;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace ExpCore.Infrastructure.Data
                 if (!exists)
                 {
                     await addEntityFunc(entity);
-                    return StatusCode(201);
+                    return StatusCode(StatusCodes.Status201Created);
                 }
             }
             return BadRequest();
@@ -61,7 +62,7 @@ namespace ExpCore.Infrastructure.Data
 
             await updateEntityFunc(entity);
 
-            return StatusCode(201);
+            return StatusCode(StatusCodes.Status200OK);
         }
 
         protected virtual async Task<ActionResult> HandleDelete(string key, Func<string, Task<TModel>> getEntityFunc, Func<TModel, Task> deleteEntityFunc)
@@ -80,7 +81,7 @@ namespace ExpCore.Infrastructure.Data
 
             await deleteEntityFunc(entity);
 
-            return StatusCode(204);
+            return StatusCode(StatusCodes.Status204NoContent);
         }
     }
 }

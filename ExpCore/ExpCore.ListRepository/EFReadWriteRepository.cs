@@ -33,7 +33,13 @@ namespace ExpCore.ExpCore.Sample.Repository
 
         public async Task Update(TModel entity)
         {
-            _customerOrderContext.Update<TModel>(entity);
+            var stored = await _customerOrderContext.FindAsync<TModel>(entity.Id);
+            if (stored == null)
+            {
+                return;
+            }
+
+            _customerOrderContext.Entry(stored).CurrentValues.SetValues(entity);
             await _customerOrderContext.SaveChangesAsync();
         }
     }
