@@ -1,11 +1,6 @@
 ﻿using ExCore.Sample.EF;
 using ExpCore.Core;
 using ExpCore.Core.Data;
-using ExpCore.ExpCore.Sample.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ExpCore.ExpCore.Sample.Repository

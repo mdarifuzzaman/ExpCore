@@ -15,7 +15,7 @@ namespace ExpCore.Controllers
     [Route("api/[controller]/[action]")]
     public class CustomerController : BaseReadWriteODataController<Customer>
     {
-        public CustomerController(IReadOnlyRepository<Customer> readOnlyRepository, IReadWriteRepository<Customer> readWriteRepository) : base(readOnlyRepository, readWriteRepository)
+        public CustomerController(IReadWriteRepository<Customer> readWriteRepository) : base(readWriteRepository)
         {
         }
     }

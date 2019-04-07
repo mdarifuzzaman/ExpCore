@@ -10,7 +10,7 @@ namespace ExpCore.Infrastructure.OData
     public abstract class BaseReadWriteODataController<TModel> : BaseReadOnlyODataController<TModel> where TModel : class, IEntity
     {
         private readonly IReadWriteRepository<TModel> _repository;
-        protected BaseReadWriteODataController(IReadOnlyRepository<TModel> readOnlyRepository, IReadWriteRepository<TModel> repository) : base(readOnlyRepository)
+        protected BaseReadWriteODataController(IReadWriteRepository<TModel> repository) : base(repository)
         {
             this._repository = repository;
         }

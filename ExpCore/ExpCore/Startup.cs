@@ -28,8 +28,6 @@ namespace ExpCore
         public void ConfigureServices(IServiceCollection services)
         {
             //registration area
-            services.AddTransient<IReadOnlyRepository<Customer>, EFReadOnlyRepository<Customer>>();
-
             services.AddTransient<IReadWriteRepository<Customer>, EFReadWriteRepository<Customer>>();
             
             services.AddTransient<IReadWriteRepository<Order>, EFReadWriteRepository<Order>>();
