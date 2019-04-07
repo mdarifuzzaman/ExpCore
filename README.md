@@ -47,7 +47,7 @@ Now, Add a controller like below and that's it !!!
     }
 </pre>
 
-### Since it's support readonly , that controller is going to support all the CRUD of Customer i.e
+### Since it's support readonly , that controller is going to support below only i.e
 1. get(by id):  --    api/customer/1 (HTTPGET)
 2. get          --    api/customer (HTTPGET)
 
