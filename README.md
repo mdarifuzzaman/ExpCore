@@ -50,3 +50,6 @@ Now, Add a controller like below and that's it !!!
 ### Since it's support readonly , that controller is going to support all the CRUD of Customer i.e
 1. get(by id):  --    api/customer/1 (HTTPGET)
 2. get          --    api/customer (HTTPGET)
+
+#### Others
+- Unit test and swagger support are coming soon
