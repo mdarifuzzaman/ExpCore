@@ -24,7 +24,7 @@
     <ProjectReference Include="..\ExCore.Sample.EF\ExCore.Sample.EF.csproj" />
     <ProjectReference Include="..\ExpCore.Core\ExpCore.Core.csproj" />
     <ProjectReference Include="..\ExpCore.Infrastructure\ExpCore.Infrastructure.csproj" />
-    <ProjectReference Include="..\ExpCore.ListRepository\ExpCore.Sample.Repository.csproj" />
+    <ProjectReference Include="..\ExpCore.Sample.Repository\ExpCore.Sample.Repository.csproj" />
   </ItemGroup>
 
 </Project>
