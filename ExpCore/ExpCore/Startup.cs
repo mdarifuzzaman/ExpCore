@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace ExpCore
 {
@@ -45,7 +46,11 @@ namespace ExpCore
             });
 
             //configure mvc
-            services.AddMvc().AddJsonOptions(y => y.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); ;
+            services.AddMvc().AddJsonOptions(y => {
+                y.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                y.SerializerSettings.Formatting = Formatting.Indented;
+
+            });
 
             //configure ef
             var connection = @"Server=(local);Database=ExCore.Sample.SqlDB;Trusted_Connection=True;ConnectRetryCount=0";

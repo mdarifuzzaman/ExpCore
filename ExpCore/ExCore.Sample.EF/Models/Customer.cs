@@ -8,6 +8,10 @@ namespace ExCore.Sample.EF.Models
 {
     public class Customer: Entity
     {
+        public Customer()
+        {
+
+        }
         public string Name { get; set; }
         public string Contact { get; set; }
         public ICollection<Order> Orders { get; set; }

@@ -1,30 +1,29 @@
 ﻿using ExpCore.Core;
 using ExpCore.Core.Model;
-using Microsoft.AspNet.OData;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.Http;
 
-namespace ExpCore.Infrastructure.OData
+namespace ExpCore.Infrastructure.Data
 {
-    public abstract class ODataServiceController<TModel> : ODataController, IODataServiceController where TModel : class, IEntity
+    public abstract class ServiceController<TModel> : Controller, IServiceController where TModel : class, IEntity
     {
-        protected ODataServiceController() { }
+        protected ServiceController() { }
 
-        protected virtual async Task<IHttpActionResult> HandleGet<T>(Func<Task<IQueryable<T>>> getEntitiesFunc)
+        protected virtual async Task<ActionResult> HandleGet<T>(Func<Task<IQueryable<T>>> getEntitiesFunc)
         {
             return Ok(await getEntitiesFunc());
         }
 
-        protected virtual async Task<IHttpActionResult> HandleGet<T>(string id, Func<string, Task<T>> getEntityFunc) where T : IEntity
+        protected virtual async Task<ActionResult> HandleGet<T>(string id, Func<string, Task<T>> getEntityFunc) where T : IEntity
         {
             return Ok(await getEntityFunc(id));
         }
 
-        protected virtual async Task<IHttpActionResult> HandlePost(TModel entity, Func<string, Task<bool>> entityExistsFunc, Func<TModel, Task> addEntityFunc)
+        protected virtual async Task<ActionResult> HandlePost(TModel entity, Func<string, Task<bool>> entityExistsFunc, Func<TModel, Task> addEntityFunc)
         {
             if (Entity.HasIdentity(entity))
             {
@@ -32,12 +31,12 @@ namespace ExpCore.Infrastructure.OData
                 if (!exists)
                 {
                     await addEntityFunc(entity);
-                    return Created(entity);
+                    return StatusCode(201);
                 }
             }
             return BadRequest();
         }
-        protected virtual async Task<IHttpActionResult> HandlePut(string key, TModel entity, Func<string, Task<bool>> entityExistsFunc, Func<TModel, Task> updateEntityFunc)
+        protected virtual async Task<ActionResult> HandlePut(string key, TModel entity, Func<string, Task<bool>> entityExistsFunc, Func<TModel, Task> updateEntityFunc)
         {
             if (!Entity.HasIdentity(entity))
             {
@@ -62,10 +61,10 @@ namespace ExpCore.Infrastructure.OData
 
             await updateEntityFunc(entity);
 
-            return Updated(entity);
+            return StatusCode(201);
         }
 
-        protected virtual async Task<IHttpActionResult> HandleDelete(string key, Func<string, Task<TModel>> getEntityFunc, Func<TModel, Task> deleteEntityFunc)
+        protected virtual async Task<ActionResult> HandleDelete(string key, Func<string, Task<TModel>> getEntityFunc, Func<TModel, Task> deleteEntityFunc)
         {
             if (string.IsNullOrEmpty(key))
             {
@@ -81,7 +80,7 @@ namespace ExpCore.Infrastructure.OData
 
             await deleteEntityFunc(entity);
 
-            return StatusCode(System.Net.HttpStatusCode.NoContent);
+            return StatusCode(204);
         }
     }
 }

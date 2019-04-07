@@ -1,25 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+using System;
 using System.Net;
-using System.Net.Http;
-using System.Text;
-using System.Web.Http.Controllers;
-using System.Web.Http.Filters;
 
 namespace ExpCore.Infrastructure.Filter
 {
     public class ValidateModelStateAttribute : ActionFilterAttribute
     {
-        public override void OnActionExecuting(HttpActionContext actionContext)
+        public ValidateModelStateAttribute()
         {
-            if(actionContext == null)
+
+        }
+
+        public override void OnActionExecuting(ActionExecutingContext context)
+        {
+            if (context == null)
             {
-                throw new ArgumentNullException(nameof(actionContext));
+                throw new ArgumentNullException(nameof(context));
             }
 
-            if (actionContext.ModelState.IsValid)
+            if (context.ModelState.IsValid)
                 return;
-            actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.BadRequest, actionContext.ModelState);
+            context.Result = new BadRequestObjectResult(context.ModelState);
         }
+        
     }
 }

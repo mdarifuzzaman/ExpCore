@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ExpCore.Infrastructure.OData
+namespace ExpCore.Infrastructure.Data
 {
-    public interface IODataServiceController
+    public interface IServiceController
     {
     }
 }

@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ExCore.Sample.EF.Models;
-using ExpCore.Core;
+﻿using ExCore.Sample.EF.Models;
 using ExpCore.Core.Data;
-using ExpCore.Infrastructure.OData;
-using Microsoft.AspNetCore.Http;
+using ExpCore.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExpCore.Controllers
 {
     [Produces("application/json")]
-    [Route("api/[controller]/[action]")]
-    public class CustomerController : BaseReadWriteODataController<Customer>
+    [Route("api/[controller]")]
+    public class CustomerController : BaseReadWriteController<Customer>
     {
         public CustomerController(IReadWriteRepository<Customer> readWriteRepository) : base(readWriteRepository)
         {
