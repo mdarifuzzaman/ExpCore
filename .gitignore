@@ -19,3 +19,5 @@
 /ExpCore/ExpCore.Sample/obj
 /ExpCore/ExpCore.Sample.Repository/bin/Debug/netcoreapp2.0
 /ExpCore/ExpCore.Sample.Repository/obj
+/ExpCore/Tests/ExpCore.Infrastructure.Tests/bin/Debug/netcoreapp2.1
+/ExpCore/Tests/ExpCore.Infrastructure.Tests/obj
