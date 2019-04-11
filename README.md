@@ -52,4 +52,4 @@ Now, Add a controller like below and that's it !!!
 2. get          --    api/customer (HTTPGET)
 
 #### Others
-- Unit test and swagger support are coming soon
+- Unit tests are added
